@@ -19,7 +19,6 @@ class Table extends Component {
               console.table(res.data)
               this.setState(res.data)
               console.log(this.state.results)
-              console.log(this.state.results[0].id.value)
               console.log(this.state.results[0].gender)
               
           })
