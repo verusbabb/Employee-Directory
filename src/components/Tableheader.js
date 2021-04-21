@@ -3,13 +3,8 @@ import React from "react";
 function Tableheader(props) {
   return (
     <div>
-      <table>
-        <tbody>
-          <tr>
-            <td>{props.gender}</td>
-          </tr>
-        </tbody>
-      </table>
+      <th>{props.header1}</th>
+      <th>{props.header2}</th>
     </div>
   );
 }
