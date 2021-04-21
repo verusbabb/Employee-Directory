@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import API from "../Utils/API";
 import Tablebody from "./Tablebody";
-import Tableheader from "./Tableheader";
+// import Tableheader from "./Tableheader";
 // import Tablebody from "./Tablebody";
 // import Tableheader from "./Tableheader";
 
 class Table extends Component {
   state = {
-    picture: "",
-    firstName: "",
-    lastName: "",
-    gender: "",
-    email: "",
+    employeeResult: [],
+    // picture: "",
+    // firstName: "",
+    // lastName: "",
+    // phone: "",
+    // email: "",
+    // DOB: "",
   };
 
   // When the component mounts, load the RANDOM EMPLOYEES to be displayed
@@ -22,21 +24,14 @@ class Table extends Component {
 
   loadRandomEmployees = () => {
     API.getRandomEmployees().then((res) => {
-      console.table(res.data.results);
-      this.setState(res.data.results);
-      this.setState({ picture: res.data.results[0].picture.thumbnail });
-      this.setState({ firstName: res.data.results[0].name.first });
-      this.setState({ lastName: res.data.results[0].name.last });
-      this.setState({ gender: res.data.results[0].gender });
-      this.setState({ email: res.data.results[0].email });
+      this.setState({ employeeResult: res.data.results });
 
-      // Logging state properties for first index value for "state"
-      console.log(this.state[0].name.first);
-      console.log(this.state[0].name.last);
+      console.table(this.state.employeeResult);
+      console.log(this.state.employeeResult);
 
       // logging state properties by individual properties
-      console.log(this.state.firstName);
-      console.log(this.state.picture);
+      //   console.log(this.state.firstName);
+      //   console.log(this.state.picture);
     });
   };
 
@@ -46,8 +41,13 @@ class Table extends Component {
     // INSERT RETURN CODE HERE
     return (
       <div>
-        <Tableheader columnOne={["First Name", "Last Name"]} />
-        <Tablebody results={[this.state.firstName, this.state.lastName]} />
+        {this.state.employeeResult.map((employee, index) => (
+          <Tablebody
+            key={index}
+            nameFirst={employee.name.first}
+            nameLast={employee.name.last}
+          />
+        ))}
       </div>
     );
   }

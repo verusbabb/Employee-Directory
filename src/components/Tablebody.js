@@ -1,7 +1,12 @@
 import React from "react";
 
 function Tablebody(props) {
-  return <tr>{props.results}</tr>;
+  return (
+    <div>
+      {props.nameFirst}
+      {props.nameLast}
+    </div>
+  );
 }
 
 export default Tablebody;

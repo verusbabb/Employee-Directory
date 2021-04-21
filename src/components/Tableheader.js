@@ -3,7 +3,8 @@ import React from "react";
 function Tableheader(props) {
   return (
     <div>
-      <th>{props.columnOne}</th>
+      <th>{props.columnFirstName}</th>
+      <th>{props.columnLastName}</th>
     </div>
   );
 }
