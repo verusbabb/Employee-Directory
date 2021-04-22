@@ -5,9 +5,11 @@ import Table from "./components/Table";
 function App() {
   return (
     // <Router>
-    <div>
-      <h1>Employee Directory</h1>
-      <Table />
+    <div className="row">
+      <div className="container">
+        <h1 className="text-center">Employee Directory</h1>
+        <Table />
+      </div>
     </div>
 
     // </Router>
