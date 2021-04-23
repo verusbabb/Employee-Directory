@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,EACE,qBACF,CAEA,8CAKE,WAAY,CACZ,SAAU,CACV,QACF","file":"main.1bcc0a18.chunk.css","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody,\r\n#root,\r\n#root > div,\r\ndiv[data-reactroot] {\r\n  height: 100%;\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n"]}
