@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="row">
       <div className="container">
-        <h1 className="text-center">Employee Directory</h1>
+        <header className="text-center">Employee Directory</header>
         <Form search={search} handleInputChange={handleInputChange} />
         <Table
           employeeResult={employeeResult.filter(function (employee) {
