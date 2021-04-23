@@ -1,24 +1,8 @@
-import React, { useState, useEffect } from "react";
-import API from "../Utils/API";
+import React from "react";
 import Tablebody from "./Tablebody";
 import moment from "moment";
 
-function Table() {
-  const [employeeResult, setEmployeeResult] = useState();
-
-  // When the component mounts, load the RANDOM EMPLOYEES to be displayed
-  // componentDidMount() {
-  //   loadRandomEmployees();
-  // };
-
-  useEffect(() => {
-    API.getRandomEmployees().then((res) => {
-      setEmployeeResult(res.data.results);
-
-      console.table(employeeResult);
-    });
-  }, []);
-
+function Table({ employeeResult }) {
   // render() {
   return (
     <div className="table-responsive">
