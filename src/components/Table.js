@@ -7,7 +7,7 @@ function Table({ employeeResult }) {
   return (
     <div className="table-responsive">
       <table className="table table-striped table-bordered">
-        <thead className="bg-primary text-white ">
+        <thead className="bg-info">
           <tr>
             <th scope="col">Picture</th>
             <th scope="col">Name</th>

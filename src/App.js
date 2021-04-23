@@ -27,7 +27,13 @@ function App() {
   return (
     <div className="row">
       <div className="container">
-        <header className="text-center">Employee Directory</header>
+        <div class="jumbotron text-center bg-info">
+          <h1 className="display-4">Employee Directory</h1>
+          <p className="lead">
+            View a list of all employees, sort employees by name, or search for
+            employees by first name.
+          </p>
+        </div>
         <Form search={search} handleInputChange={handleInputChange} />
         <Table
           employeeResult={employeeResult.filter(function (employee) {
