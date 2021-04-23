@@ -13,7 +13,7 @@ function Table() {
 
   useEffect(() => {
     API.getRandomEmployees().then((res) => {
-      setEmployeeResult(res.data);
+      setEmployeeResult(res.data.results);
 
       console.table(employeeResult);
     });
