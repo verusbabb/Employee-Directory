@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { BrowserRouter as Router, Route } from "react-router-dom";
 import Table from "./components/Table";
 import Form from "./components/Form";
 import API from "./Utils/API";
@@ -19,15 +18,27 @@ function App() {
   const getEmployees = () => {
     API.getRandomEmployees().then((res) => {
       setEmployeeResult(res.data.results);
-
-      console.table(employeeResult);
     });
+  };
+
+  const compareBy = (key) => {
+    return function (a, b) {
+      if (a[key] < b[key]) return -1;
+      if (a[key] > b[key]) return 1;
+      return 0;
+    };
+  };
+
+  const sortBy = (key) => {
+    let arrayCopy = [...employeeResult];
+    arrayCopy.sort(compareBy(key));
+    setEmployeeResult(arrayCopy);
   };
 
   return (
     <div className="row">
       <div className="container">
-        <div class="jumbotron text-center bg-info">
+        <div className="jumbotron text-center bg-info">
           <h1 className="display-4">Employee Directory</h1>
           <p className="lead">
             View a list of all employees, sort employees by name, or search for
@@ -41,6 +52,7 @@ function App() {
               .toUpperCase()
               .includes(search.toUpperCase());
           })}
+          sortBy={sortBy}
         />
       </div>
     </div>
