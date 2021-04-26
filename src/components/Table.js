@@ -2,16 +2,22 @@ import React from "react";
 import Tablebody from "./Tablebody";
 import moment from "moment";
 
-function Table({ employeeResult, sortName, sortEmail, sortDOB }) {
+function Table({ employeeResult, sortBy }) {
   return (
     <div className="table-responsive">
       <table className="table table-striped table-bordered">
         <thead className="bg-info">
           <tr>
             <th scope="col">Picture</th>
-            <th onClick={() => sortName("name")}>Name</th>
-            <th onClick={() => sortEmail("email")}>Email</th>
-            <th onClick={() => sortDOB("dob")}>DOB</th>
+            <th scope="col" onClick={() => sortBy("name")}>
+              Name
+            </th>
+            <th scope="col" onClick={() => sortBy("email")}>
+              Email
+            </th>
+            <th scope="col" onClick={() => sortBy("dob.date")}>
+              DOB
+            </th>
           </tr>
         </thead>
         {employeeResult.map((employee, index) => (

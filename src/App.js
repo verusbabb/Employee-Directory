@@ -29,44 +29,20 @@ function App() {
     });
   };
 
-  function compareByName(a, b) {
-    if (a.name.last < b.name.last) return -1;
-    if (a.name.last > b.name.last) return 1;
-    return 0;
-  }
+  const compareBy = (key) => {
+    return function (a, b) {
+      if (a[key] < b[key]) return -1;
+      if (a[key] > b[key]) return 1;
+      return 0;
+    };
+  };
 
-  function sortByName() {
+  const sortBy = (key) => {
     dataSort
       ? setEmployeeResult((prevData) => [...prevData.sort().reverse()])
-      : setEmployeeResult((prevData) => [...prevData.sort(compareByName)]);
+      : setEmployeeResult((prevData) => [...prevData.sort(compareBy(key))]);
     setDataSort(!dataSort);
-  }
-
-  function compareByEmail(a, b) {
-    if (a.email < b.email) return -1;
-    if (a.email > b.email) return 1;
-    return 0;
-  }
-
-  function sortByEmail() {
-    dataSort
-      ? setEmployeeResult((prevData) => [...prevData.sort().reverse()])
-      : setEmployeeResult((prevData) => [...prevData.sort(compareByEmail)]);
-    setDataSort(!dataSort);
-  }
-
-  function compareByDOB(a, b) {
-    if (a.dob.date < b.dob.date) return -1;
-    if (a.dob.date > b.dob.date) return 1;
-    return 0;
-  }
-
-  function sortByDOB() {
-    dataSort
-      ? setEmployeeResult((prevData) => [...prevData.sort().reverse()])
-      : setEmployeeResult((prevData) => [...prevData.sort(compareByDOB)]);
-    setDataSort(!dataSort);
-  }
+  };
 
   return (
     <div className="row">
@@ -85,9 +61,9 @@ function App() {
               .toUpperCase()
               .includes(search.toUpperCase());
           })}
-          sortName={sortByName}
-          sortEmail={sortByEmail}
-          sortDOB={sortByDOB}
+          sortBy={sortBy}
+          // sortEmail={sortByEmail}
+          // sortDOB={sortByDOB}
         />
       </div>
     </div>
