@@ -8,7 +8,9 @@ function Tablebody(props) {
           <img src={props.picture}></img>
         </td>
         <td>{props.nameFirst + " " + props.nameLast}</td>
-        <td>{props.email}</td>
+        <td>
+          <a href={"mailto:" + props.email}>{props.email}</a>
+        </td>
         <td>{props.dob}</td>
       </tr>
     </tbody>
