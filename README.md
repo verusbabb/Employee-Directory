@@ -1,4 +1,4 @@
-# Employee Directory
+# REACT Employee Directory
 
 https://verusbabb.github.io/Employee-Directory/
 
@@ -9,6 +9,7 @@ This app is built with React and provides users with a directory that displays b
 As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 ```
 ## Developer Challenge
+
 This app was built from scratch (no starter code).  The developer challenges included:
 
  * Accessing a public API to get random employee data (https://randomuser.me).
@@ -17,6 +18,13 @@ This app was built from scratch (no starter code).  The developer challenges inc
     * Table.js: renders the empty table with click events methods to call functions in App.js, and calls the Tablebody component.
     * TableBody.js: renders the data in the table
     * Form.js: renders a form for searching by employee first name with click event methods calling back to functions in App.js.
+
+## Key Languages/Tools/Frameworks Employed
+
+* Node.js
+* React
+* Javascript
+* Bootstrap
 
 ## App Sceenshots
 
@@ -39,4 +47,8 @@ Results sorted by DOB:
 Search results (i.e. search for Marie):
 
 ![](https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/search.png)
+
+## CONNECT WITH ME
+- Email: steve.babb@outlook.com
+- GitHub: https://github.com/verusbabb
 
