@@ -38,5 +38,5 @@ Results sorted by DOB:
 
 Search results (i.e. search for Marie):
 
-![] (https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/search.png)
+![](https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/search.png)
 
