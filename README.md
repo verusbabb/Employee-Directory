@@ -20,3 +20,23 @@ This app was built from scratch (no starter code).  The developer challenges inc
 
 ## App Sceenshots
 
+Results, unsorted:
+
+![](https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/Basic.png)
+
+Results sorted by last name:
+
+![](https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/nameABC.png)
+
+Results sorted by email address:
+
+![](https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/emailABC.png)
+
+Results sorted by DOB:
+
+![](https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/dobABC.png)
+
+Search results (i.e. search for Marie):
+
+![] (https://github.com/verusbabb/Employee-Directory/blob/main/public/screenshots/search.png)
+
